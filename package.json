@@ -1,0 +1,38 @@
+{
+  "name": "vue-route-laravel",
+  "version": "1.0.3",
+  "description": "Plugin Vue js para consumir rutas de laravel por medio de nombres.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuejs",
+    "vue - js",
+    "route",
+    "laravel",
+    "plugin"
+  ],
+  "author": "Omar Vasquez. <om.ferito@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "vue": "^2.4.4"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omferito/vue-route-laravel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omferito/vue-route-laravel/issues"
+  },
+  "homepage": "https://github.com/omferito/vue-route-laravel#readme",
+  "engines": {
+    "node": ">=4.2.4"
+  }
+}

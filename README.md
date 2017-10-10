@@ -66,8 +66,42 @@ Vue.use(VueRouteLaravel, config)
 
 #### Usage.
 ---
+* Redirect 
 
-* Request GET.
+```
+ //redirect url http://basename/foo/bar
+ Route::get('foo/bar', 'TestController@get')->name('example.route.get');
+
+ //in vue js.
+ this.$routeLaravel('example.route.get').redirect()
+
+```
+
+* Get string url // Note: remember that the query is asynchronous
+
+```
+ Controller
+ Route::get('foo/bar', 'TestController@get')->name('example.route.get');
+
+
+ //value urlblog =  http://basename/foo/bar
+ const app = new Vue({
+    el: '#app',
+    data: {
+        urlblog: '',
+    }, 
+
+    created: function (){
+     this.$routeLaravel('testing').url()
+         .then(response => this.urlblog = response)
+    },
+
+    });
+
+```
+
+* http GET.
+
 ```
 //route web.php
 Route::get('foo/{bar}', 'TestController@get')->name('example.route.get');
@@ -85,7 +119,7 @@ Route::get('foo/{bar}', 'TestController@get')->name('example.route.get');
 
 ```
 
-* Request POST.
+* http POST.
 ```
 //route web.php
 Route::post('foo/bar', 'TestController@post')->name('example.route.post');
